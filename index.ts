@@ -33,25 +33,45 @@ const address = addressEnv;
 
 const ops: Array<Op> = [];
 
-// create properties and type for type Run
-const { id: durationIdPropertyId, ops: createDurationPropertyOps } = Graph.createProperty({
-  name: 'duration',
-  dataType: 'NUMBER',
+const { id: summaryIdPropertyId, ops: createSummaryPropertyOps } = Graph.createProperty({
+  name: "Summary",
+  dataType: "TEXT",
 });
 
-ops.push(...createDurationPropertyOps);
+ops.push(...createSummaryPropertyOps);
 
-const { id: runTypeId, ops: createRunEntityOps } = Graph.createType({
-  name: 'Run',
-  properties: [SystemIds.NAME_PROPERTY, durationIdPropertyId],
+const { id: genreTypeId, ops: createGenreTypeOps } = Graph.createType(
+  {
+    name: "Genre",
+    properties: [SystemIds.NAME_PROPERTY],
+  }
+);
+
+ops.push(...createGenreTypeOps);
+
+const { id: genreIdPropertyId, ops: createGenrePropertyOps } =
+  Graph.createProperty({
+    name: "Genre",
+    dataType: "RELATION",
+    relationValueTypes: [genreTypeId],
+  });
+
+ops.push(...createGenrePropertyOps);
+
+const { id: movieTypeId, ops: createMovieTypeOps } = Graph.createType({
+  name: "Movie",
+  properties: [
+    SystemIds.NAME_PROPERTY,
+    SystemIds.DESCRIPTION_PROPERTY,
+    summaryIdPropertyId,
+    genreIdPropertyId,
+  ],
 });
 
-ops.push(...createRunEntityOps);
+ops.push(...createMovieTypeOps);
 
-console.log({
-  durationIdPropertyId,
-  runTypeId
-})
+console.log({movieTypeId, summaryIdPropertyId, genreTypeId,genreIdPropertyId});
+
 
 const smartAccountWalletClient = await getWalletClient({
   privateKey: addressPrivateKey,
