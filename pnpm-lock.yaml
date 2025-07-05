@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@graphprotocol/grc-20':
-        specifier: ^0.21.3
-        version: 0.21.3(graphql@16.11.0)(typescript@5.8.3)
+        specifier: ^0.21.4
+        version: 0.21.4(graphql@16.11.0)(typescript@5.8.3)
       dotenv:
         specifier: ^17.0.1
         version: 17.0.1
@@ -182,8 +182,8 @@ packages:
   '@ethersproject/wordlists@5.8.0':
     resolution: {integrity: sha512-2df9bbXicZws2Sb5S6ET493uJ0Z84Fjr3pC4tu/qlnZERibZCeUVuqdtt+7Tv9xxhUxHoIekIA7avrKUWHrezg==}
 
-  '@graphprotocol/grc-20@0.21.3':
-    resolution: {integrity: sha512-g9N25MRtJEher3OClvF2DV2OcnxaPmd0AhxhML6R++GMB7IjcSKX+At6flWCFRBbSphYN8VQsYlHDBzFoXA8zA==}
+  '@graphprotocol/grc-20@0.21.4':
+    resolution: {integrity: sha512-uc8gRqvGy+ZRm+DPvBmmEZ4hjsuTFU9VKX05oEGxU7nCRO34KFIHLm4+fShWZMiepOBV2UtDD+PMY7Sb+WH/yg==}
 
   '@graphql-typed-document-node/core@3.2.0':
     resolution: {integrity: sha512-mB9oAsNCm9aM3/SOv4YtBMqZbYj10R7dkq8byBqxGY/ncFwhf2oQzMV+LCRlWoDSEBJ3COiR1yeDvMtsoOsuFQ==}
@@ -1090,7 +1090,7 @@ snapshots:
       '@ethersproject/properties': 5.8.0
       '@ethersproject/strings': 5.8.0
 
-  '@graphprotocol/grc-20@0.21.3(graphql@16.11.0)(typescript@5.8.3)':
+  '@graphprotocol/grc-20@0.21.4(graphql@16.11.0)(typescript@5.8.3)':
     dependencies:
       '@bufbuild/protobuf': 1.10.1
       '@changesets/cli': 2.29.5
