@@ -61,7 +61,7 @@ const { id: genreIdPropertyId, ops: createGenrePropertyOps } =
   });
 ```
 
-## Create Movie
+### Create Movie
 
 ```typescript
 import { SystemIds } from "@graphprotocol/grc-20";
